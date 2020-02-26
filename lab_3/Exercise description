@@ -1,0 +1,10 @@
+build a prototype embedded system on the DE2 board that emulates the digital part of an elevator with following input/output behavior and assumptions/constraints.
+INPUT
+1. SWITCH_I[16] sets up the amount of time the elevator spends between floors, PUSH_BUTTON_I[2] activates the new value
+2. SWITCH_I[15] sets up the amount of time the elevator speends at each floor while the doors are open, and PUSH_BUTTON_I[1] activates the new value.
+3. SWITCH_I[11] down to SWITCH_I[0] are used to indicate the corresponding floor that the elevator will go to
+4. PUSH_BUTTON_I[3] will keep the dooor open even if the interrupt to close the door is generated after an elevator reaches the floor.
+
+OUTPUT
+1. The rightmost seven segment display should show the floor number where the elevator is located
+2. RED_LED_O[11] down to RED_LED_O[0] will be lighted on when a request has been made at the corresponding floor and be turned off as soon as the elevator reaches the floor.
